@@ -1,1 +1,9 @@
-hello
+Before you run this code on your ESP8266 there are some credentials that needs to be filled in. 
+You find them in randomDevice.h
+
+14.	//wifi-credentials
+15.	const char* ssid = "********";
+16.	const char* password = "********";
+17.	//Your Domain name with URL path or IP address with path
+Ipadress to the server that Node-red is running. In this case, the adress of my raspberrypi, the node-red port (1880) and "URL" of the HTTP-in node. Here "update-device".
+18.	const char* serverName = "http://192.168.1.73:1880/update-device";
