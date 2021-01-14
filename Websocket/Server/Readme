@@ -20,6 +20,7 @@ Don't forget to execute.
 If you get linker errors, your configuration might need to be different from mine. 
 Check this guide to troubleshoot: https://dev.mysql.com/doc/connector-cpp/8.0/en/connector-cpp-apps-windows-notes.html
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+SERVERSIDE ONLY
 
 In "deviceHandler.cpp", change the port to suit your project
 27.	hint.sin_port = htons(54000);
