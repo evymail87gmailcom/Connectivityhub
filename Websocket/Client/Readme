@@ -1,1 +1,10 @@
 
+In "deviceinfo.h", change 
+
+
+22.	//Ipadress of the Socketserver
+23.	string ipAddress = "*********";
+24.	//Listening port of the server
+25.	int port = *******;
+
+to match the credentials of your websocketserver
