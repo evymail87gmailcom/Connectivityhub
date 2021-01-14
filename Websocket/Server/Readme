@@ -1,5 +1,27 @@
+THESE SETTING ARE USED FOR BOTH CLIENT AND SERVER
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+In this project I am using MySql Connector 8.0.
+Download MySql Workbench and you will get it as well. https://dev.mysql.com/downloads/workbench/
 
-In "deviceHandler.cpp", chage the port to suit your project
+To configure in Visual Studio on Windows10:
+In the topnav menu go to "Project->websocketserver-properties". 
+In "Configuration" choose "Release" and in "Platform" choose "x64". 
+Go to C/C++ General. 
+In "Add Include Directories" insert the path to where the connector is and the boost folder. Example:
+C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Users\Username\source\repos\boost_1_75_0
+
+Go to "Linker->General" and in "Additional Library Directories" insert the path to where the "lib64\vs14" is. Example:
+C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14
+
+Go to "Linker->Input" and in "Additional Depevdencies" insert mysqlcppconn.lib.
+
+Don't forget to execute.
+
+If you get linker errors, your configuration might need to be different from mine. 
+Check this guide to troubleshoot: https://dev.mysql.com/doc/connector-cpp/8.0/en/connector-cpp-apps-windows-notes.html
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+In "deviceHandler.cpp", change the port to suit your project
 27.	hint.sin_port = htons(54000);
 
 In "main.cpp" change the credentials to match your SQL-database
